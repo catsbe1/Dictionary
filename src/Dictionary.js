@@ -7,7 +7,9 @@ export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
   let [results, setResults] = useState(null);
 
-  function handleResponse(response) {}
+  function handleResponse(response) {
+    setResults(response.data[0]);
+  }
 
   function seacrh(event) {
     event.preventDefault();
@@ -24,7 +26,7 @@ export default function Dictionary() {
       <form onSubmit={seacrh}>
         <input type="search" autoFocus={true} onChange={handleKeywordChange} />
       </form>
-      <Results />
+      <Results results={results} />
     </div>
   );
 }
