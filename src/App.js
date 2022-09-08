@@ -11,8 +11,15 @@ export default function App() {
           <img src={logo} className="app-logo img-fluid" alt="logo" />
         </header>
         <main>
-          <Dictionary />
+          <Dictionary defaultKeyword="sunrise" />
         </main>
+        <footer className="text-center mt-3">
+          This site is{" "}
+          <a href="https://github.com/catsbe1" target="blank_">
+            open-source
+          </a>{" "}
+          and was coded by Ana Ribeiro
+        </footer>
       </div>
     </div>
   );
